@@ -1,0 +1,146 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 400px; /* Limite máximo de largura */
+  z-index: 1; /* Garante que o container fique acima do jogador */
+}
+
+.container .registration {
+  display: none;
+}
+
+#check:checked ~ .registration {
+  display: block;
+}
+
+#check:checked ~ .login {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+.container .form {
+  position: relative;
+  padding: 1.5rem; /* Reduzi o padding */
+}
+
+.form-player {
+  position: absolute;
+  top: 5px; /* Ajuste conforme necessário para mover a imagem para baixo */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  opacity: 0.2  ; /* Ajuste o nível de opacidade conforme necessário */
+  z-index: -1; /* Coloca a imagem atrás dos campos de entrada */
+}
+
+
+.form header {
+  font-size: 1.5rem; /* Reduzi o tamanho da fonte */
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem; /* Reduzi o espaço inferior */
+  margin-top: -10px; /* Ajuste para mover o título para cima */
+}
+
+.form .field {
+  margin-bottom: 1rem; /* Reduzi o espaço inferior */
+}
+
+.form input {
+  height: 45px; /* Reduzi a altura dos inputs */
+  width: 100%;
+  padding: 0 15px;
+  font-size: 16px; /* Ajustei o tamanho da fonte */
+  margin-bottom: 1rem; /* Reduzi o espaço inferior */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  position: relative; /* Garante que os inputs estejam acima da imagem */
+  z-index: 1; /* Garante que os inputs estejam acima da imagem */
+}
+
+.form input:focus {
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.form a {
+  font-size: 14px; /* Ajustei o tamanho da fonte */
+  color: #0463FA;
+  text-decoration: none;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form input.button {
+  color: #fff;
+  background: #0463FA;
+  font-size: 1rem; /* Ajustei o tamanho da fonte */
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 1.2rem; /* Reduzi o espaço superior */
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.form input.button:hover {
+  background: #0463FA;
+}
+
+.signup {
+  font-size: 15px; /* Ajustei o tamanho da fonte */
+  text-align: center;
+}
+
+.signup label {
+  color: #0463FA;
+  cursor: pointer;
+}
+
+.signup label:hover {
+  text-decoration: underline;
+}
+
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #04AA6D; /* Green */
+  color: white;
+}
